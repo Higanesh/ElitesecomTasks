@@ -13,7 +13,7 @@ for filename in os.listdir(folder_path):
         file_path = os.path.join(folder_path, filename)
         merger.append(file_path)
 
-
+output_path = r"D:\myProjects\ElitesecomTasks\Output PDFs\mergeAll.pdf"
 # # Append files for merge
 # merger.append("sample.pdf")
 
@@ -24,6 +24,7 @@ for filename in os.listdir(folder_path):
 # merger.append("cropped_Lower.pdf")
 
 # Write the merged PDF to a new file
-merger.write("mergeAll.pdf")
-
+with open(output_path, "wb") as f:
+    merger.write(f)
+    
 merger.close()

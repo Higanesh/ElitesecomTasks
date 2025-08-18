@@ -1,95 +1,63 @@
-"""
-Script Name: update_order_date.py
-Purpose:
-    - Download a PDF from a given URL
-    - Extract the "Order Date" section
-    - Place it right after the "If undelivered, return to:" block in the PDF
-"""
+#merge that all 100 pdfs
 
-import fitz  # PyMuPDF - Library for PDF manipulation
-import requests  # To download the PDF from a URL
-import io  # For handling in-memory binary streams
+import fitz
+import random
+import io
+import requests
+import time  # <-- import time module
 
-# ------------------------------
-# Step 1: Download PDF from URL
-# ------------------------------
-pdf_url = "https://ee-uploaded-files.s3.ap-south-1.amazonaws.com/Labels/388/434861925.pdf?request-content-type=application/force-download"
+start_time = time.perf_counter()  # Start timer
 
-response = requests.get(pdf_url)
-if response.status_code != 200:
-    raise Exception(f"❌ Failed to download PDF from: {pdf_url}")
+for i in range(100):
+    pdf_url = "https://ee-uploaded-files.s3.ap-south-1.amazonaws.com/Labels/388/437165474.pdf?request-content-type=application/force-download"
 
-# Store the downloaded file in memory (BytesIO object)
-pdf_bytes = io.BytesIO(response.content)
+    response = requests.get(pdf_url)
+    if response.status_code != 200:
+        raise Exception(f"❌ Failed to download {pdf_url}")
 
-# Open the PDF with PyMuPDF
-doc = fitz.open(stream=pdf_bytes.getvalue(), filetype="pdf")
+    pdf_bytes = io.BytesIO(response.content)
+    doc = fitz.open(stream=pdf_bytes.getvalue(), filetype="pdf")
 
-# ------------------------------
-# Step 2: Extract all text from PDF
-# ------------------------------
-full_text = ""
-for page_num in range(len(doc)):
-    full_text += doc[page_num].get_text()  # Append text from each page
+    output_pdf = rf"D:\myProjects\ElitesecomTasks\Output PDFs\100_pdfs\cropped_with_text_{i}.pdf"
 
-# Store PDF text in a tuple (optional)
-pdf_text_tuple = (full_text,)
+    page = doc[0]
+    blocks = page.get_text("blocks")
+    if not blocks:
+        raise Exception("❌ No text found in PDF.")
 
-# ------------------------------
-# Step 3: Extract "Order Date" block
-# ------------------------------
-text_str = pdf_text_tuple[0]  # Convert tuple → string
-start_keyword = "Order Date"
-end_keyword = "Invoice Date"
+    first_block = min(blocks, key=lambda b: b[1])
+    last_block = max(blocks, key=lambda b: b[3])
 
-# Find indexes of keywords
-start_index = text_str.find(start_keyword)
-end_index = text_str.find(end_keyword)
+    # Top text
+    random_top_text = "Random Top Text: " + str(random.randint(1000, 9999))
+    page.insert_text(
+        (page.rect.x0 + 12, first_block[1] - 5),
+        random_top_text,
+        fontsize=12,
+        fontname="helv",
+        fill=(0, 0, 0)
+    )
 
-if start_index != -1 and end_index != -1:
-    extracted_order_date = text_str[start_index:end_index].strip()
-    extracted_order_date = extracted_order_date.replace("\n", " ")  # Make it single line
-else:
-    raise Exception("❌ 'Order Date' section not found in PDF text.")
+    # Bottom text
+    random_bottom_text = "Random Bottom Text: " + str(random.randint(1000, 9999))
+    page.insert_text(
+        (page.rect.x0 + 12, last_block[3] + 15),
+        random_bottom_text,
+        fontsize=12,
+        fontname="helv",
+        fill=(0, 0, 0)
+    )
 
-print("✅ Extracted Order Date block:", extracted_order_date)
+    # Crop bottom blank space
+    blocks_after = page.get_text("blocks")
+    last_y_after = max(b[3] for b in blocks_after)
+    crop_rect = fitz.Rect(page.rect.x0, page.rect.y0, page.rect.x1, last_y_after + 5)
+    page.set_cropbox(crop_rect)
 
-# ------------------------------
-# Step 4: Find "If undelivered" block position
-# ------------------------------
-page = doc[0]  # First page
-blocks = page.get_text("blocks")  # List of (x0, y0, x1, y1, text, ...)
+    doc.save(output_pdf)
 
-target_block_text = "If undelivered, return to:"
-target_rect = None
+end_time = time.perf_counter()  # End timer
 
-# Search for the exact block
-for b in blocks:
-    if target_block_text in b[4]:  # b[4] contains the text
-        target_rect = fitz.Rect(b[:4])  # Get coordinates
-        break
-
-if target_rect is None:
-    raise Exception("❌ Target block not found in PDF.")
-
-# ------------------------------
-# Step 5: Insert extracted text after the block
-# ------------------------------
-insert_x = target_rect.x0
-insert_y = target_rect.y1 + 10  # A little gap after block
-
-page.insert_text(
-    (insert_x, insert_y),
-    extracted_order_date,
-    fontsize=10,
-    fontname="helv"
-)
-
-# ------------------------------
-# Step 6: Save updated PDF
-# ------------------------------
-output_path = "final_updated_order_date.pdf"
-doc.save(output_path)
-doc.close()
-
-print(f"✅ Updated PDF saved as: {output_path}")
+total_time = end_time - start_time
+print(f"⏱ Total time to process 100 PDFs: {total_time:.2f} seconds")
+print(f"⏱ Average time per PDF: {total_time/100:.2f} seconds")

@@ -1,6 +1,6 @@
 import fitz  # PyMuPDF
 
-pdf_path = "label-1.pdf"  # or your PDF
+pdf_path = r"D:\myProjects\ElitesecomTasks\Input files\label-1.pdf"  # or your PDF
 doc = fitz.open(pdf_path)
 page = doc[0]  # first page
 

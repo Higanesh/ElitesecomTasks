@@ -5,7 +5,7 @@ import io
 # -------------------------------------------------------
 # Step 1: PDF URL (Change this to your desired PDF link)
 # -------------------------------------------------------
-pdf_url = "https://ee-uploaded-files.s3.ap-south-1.amazonaws.com/Labels/389/434849072.pdf?request-content-type=application/force-download"
+pdf_url = "https://ee-uploaded-files.s3.ap-south-1.amazonaws.com/Labels/388/434861925.pdf?request-content-type=application/force-download"
 
 # -------------------------------------------------------
 # Step 2: Download PDF from URL
@@ -28,6 +28,8 @@ for page in reader.pages:
     page.mediabox.upper_right = (crop_x2, crop_y2)
     writer.add_page(page)
 
+output_path = r"D:\myProjects\ElitesecomTasks\Output PDFs\cropped_label.pdf"
+
 # Save cropped PDF
-with open("cropped_label_1.pdf", "wb") as f:
+with open(output_path, "wb") as f:
     writer.write(f)
