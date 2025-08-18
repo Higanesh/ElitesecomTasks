@@ -1,0 +1,19 @@
+🗓 Day-5
+
+Name: Ganesh Gayakwad
+Date: 18/08/2025
+
+Tasks Completed Today:
+
+	1. I take PDFs from a URL and remove blank space from every PDF.
+	2. Also, after removing blank space, put random text at the top of the PDF and the bottom of the PDF.
+	3. After completing all three operations, merge them into a single PDF.
+	4. 	
+	5. 
+
+What I Learned Today:
+
+	1. By using the Fitz module, I have done some PDF operations like editing, cropping, and merging.
+	2. Also, by using the random module, I have put random text at the top of the PDF and the bottom of the PDF.
+	3. The time module and the perf_counter function help me to check the execution time of the script.
+	4. 

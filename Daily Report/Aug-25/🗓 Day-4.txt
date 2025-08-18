@@ -1,0 +1,17 @@
+🗓 Day-4
+
+Name: Ganesh Gayakwad
+Date: 14/08/2025
+
+Tasks Completed Today:
+
+	1. Copy text from one place and paste it into another place in the same PDF without using coordinates.
+	2. Crop PDF without using coordinates in a Python script. 
+	3. Copy text from one place and paste it into another place in the same PDF using PDF blocks.
+	4. I have a PDF in which blank space is there now, and I want to remove that blank space from the PDF.
+
+What I Learned Today:
+
+	1. By using the Fitz module, I have done some PDF operations like editing, cropping, and merging.
+	2. First, I collect all block texts into one tuple, and by using indexing, I find the text that I want to copy & paste.
+	3. First, I find the bottom-end text from the PDF, and by using that, I crop the blank space from the PDF.

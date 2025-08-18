@@ -1,0 +1,23 @@
+🗓 Day-1
+
+Name: Ganesh Gayakwad
+Date: 11/08/2025
+
+Tasks Completed Today:
+
+	1. Create a PDF by using a Python script.
+	2. Add text into the existing PDF by using a Python script.
+	3. Crop PDF by using coordinates in a Python script.
+	4. Merged multiple PDFS into a single one by using a Python script.
+	5. Get multiple PDFS from a URL and merge them into a single PDF using a Python script. 
+
+What I Learned Today:
+
+	1. Create a PDF using the pypdf Python library.
+	2. Add text to the PDF by using the drawstring method.
+	3. Crop PDF by using pdfReader and pdfWriter, and also use mediabox method to select the cropped area.
+	4. Merge multiple PDFs into a single one by using pdfwriter and the append method.
+
+
+
+

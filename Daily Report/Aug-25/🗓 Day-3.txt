@@ -1,0 +1,18 @@
+🗓 Day-3
+
+Name: Ganesh Gayakwad
+Date: 13/08/2025
+
+Tasks Completed Today:
+
+	1. Get the label from the given URL, and after that, crop the labels' unwanted parts and save them as a new PDF.
+	2. Copy text from one place and paste it into another place in the same PDF.
+	3. Crop the user-selected part of the PDF.
+
+What I Learned Today:
+
+	1. Crop label by selecting the coordinates of that part which you want to crop.
+	2. If you want to crop the same part every time and those coordinates are the same, then use a static cropping method in which you first find the coordinates, and after that, store those coordinates into variables and use those coordinates every time for the crop.
+	3. For displaying a PDF page and selecting coordinates, use matplotlib.pyplot module. 
+	4. Use numpy module for handling image arrays.
+	5. PyMuPDF - for rendering PDF pages as images.

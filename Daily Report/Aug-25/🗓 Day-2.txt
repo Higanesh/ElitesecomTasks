@@ -1,0 +1,16 @@
+🗓 Day-2
+
+Name: Ganesh Gayakwad
+Date: 12/08/2025
+
+Tasks Completed Today:
+	
+	1. Get 1000 PDFs from a URL and merge them into a single PDF.
+	2. Check how much time it will take to merge 1000 PDFs after cropping each.
+	3. Minimize the execution time of the script for crop & merge PDFs.
+
+What I Learned Today:
+
+	1. I get 1 document in which 1000 URLs are there. Now I have to call every URL one by one and download a PDF from every URL.
+	2. Download every PDF from the URL and crop them one by one, and merge them into a single PDF.
+	3. Minimize execution time by using concurrent.futures module and ThreadPoolExecutor class, which downloads 50 PDFs at a time, increasing performance and decreasing execution time.
