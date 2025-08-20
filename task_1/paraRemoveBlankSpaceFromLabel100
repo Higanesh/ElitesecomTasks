@@ -52,7 +52,6 @@ def download_and_process(i, url):
         # Crop
         crop_rect = fitz.Rect(page.rect.x0, page.rect.y0, page.rect.x1, last_block[3] + 20)
         page.set_cropbox(crop_rect)
-
     t2 = time.perf_counter()
     return doc, (t2 - t1)  # return doc + processing time
 
@@ -85,10 +84,10 @@ rss_mb = mem_info.rss / (1024*1024)   # Resident memory in MB
 vms_mb = mem_info.vms / (1024*1024)   # Virtual memory in MB
 
 # Print results
-print(f"⏬ Total processing time (all workers): {download_time:.2f} seconds")
-print(f"⏱ Overall total time: {total_time:.2f} seconds")
-print(f"➡️ Average time per PDF: {total_time/NUM_PDFS:.2f} seconds")
-print(f"💾 Memory Usage -> RSS: {rss_mb:.2f} MB | VMS: {vms_mb:.2f} MB")
+# print(f"⏬ Total processing time (all workers): {download_time:.2f} seconds")
+# print(f"⏱ Overall total time: {total_time:.2f} seconds")
+# print(f"➡️ Average time per PDF: {total_time/NUM_PDFS:.2f} seconds")
+# print(f"💾 Memory Usage -> RSS: {rss_mb:.2f} MB | VMS: {vms_mb:.2f} MB")
 
 
 """

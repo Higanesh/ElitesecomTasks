@@ -1,0 +1,37 @@
+computational requirements:
+
+
+🖥️ Your System
+
+CPU: 8 cores → can support many concurrent lightweight tasks.
+
+RAM: 32 GB → plenty, your PDFs are small (20–50 KB), so memory won’t be a limit.
+
+Network: 200 Mbps (≈25 MB/s) → very good; the bottleneck will be the remote server or latency, not your bandwidth.
+
+
+⚡ Parallelism Recommendation
+
+Safe default: max_workers = 32
+
+Aggressive but stable: max_workers = 64
+
+Ceiling (test only): max_workers ≈ 100
+
+Beyond 100: no real speedup, risk of failures (timeouts, 429 errors).
+
+
+📊 Why?
+
+Your task is I/O-bound (downloading PDFs), not CPU-heavy.
+
+Network + server concurrency is the limiting factor, not CPU or RAM.
+
+With 200 Mbps, you can easily saturate downloads for 1000 PDFs in parallel, but the server may throttle you.
+
+
+📌 Final Answer
+
+On 8 cores, 32 GB RAM, 200 Mbps network:
+👉 You can comfortably run 32–64 parallel PDF tasks.
+👉 You may push to 100 tasks if the server allows it, but more than that is wasteful.
