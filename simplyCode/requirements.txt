@@ -1,0 +1,4 @@
+pymupdf
+requests
+psutil
+speedtest-cli

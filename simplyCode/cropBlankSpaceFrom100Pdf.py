@@ -82,7 +82,7 @@ merged_pdf = fitz.open()
 start_time = time.perf_counter()  # start timer
 
 with ThreadPoolExecutor(max_workers=10) as executor:
-    futures = [executor.submit(download_and_crop_pdf, i, pdf_url) for i in range(50)]
+    futures = [executor.submit(download_and_crop_pdf, i, pdf_url) for i in range(500)]
 
     for future in as_completed(futures):
         try:
