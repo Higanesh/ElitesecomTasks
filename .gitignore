@@ -4,8 +4,8 @@ credentials.env
 **/credentials.env
 
 # Reports containing secrets (just in case)
-D:/myProjects/asset/Shopify Python API.txt
-D:/myProjects/asset/Shopify Python API.md
+D:/myProjects/fresh-repo/Daily Report/Shopify Python API.txt
+D:/myProjects/fresh-repo/Daily Report/Shopify Python API.md
 
 # Python cruft (optional but recommended)
 __pycache__/
