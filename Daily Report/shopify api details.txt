@@ -1,0 +1,36 @@
+***Shopify itself does not provide a single built-in field or flag called “confirmed order.
+
+Here’s why:
+
+In Shopify, an order is considered “placed” as soon as it is created successfully in the system.
+
+After that, there are different statuses for different parts of the workflow:
+
+financial_status – whether the payment has been captured/paid, pending, refunded, etc.
+
+fulfillment_status – whether the order items have been shipped/fulfilled.
+
+cancelled_at – if the order was cancelled.
+
+But Shopify does not define “confirmed” because different businesses have different meanings for that:
+
+Prepaid orders: Many businesses treat an order as “confirmed” only if financial_status is "paid" or "partially_paid".
+
+COD orders: Others treat any successfully created COD order as “confirmed,” even if financial_status is "pending" or "unpaid".
+
+Manual confirmation workflows: Some businesses call customers before dispatch and then mark the order with a custom tag or metafield like "confirmed".
+
+
+***So how can you handle it?
+
+If you want a universal “confirmed” field, you need to define your own rule. For example:
+
+Confirmed if financial_status in ["paid", "partially_paid"]
+
+OR (for COD) Confirmed if payment_gateway_names contains “cash on delivery” and order is not cancelled.
+
+Or, if you need manual confirmation, you can:
+
+Add a tag like "confirmed" via API after you confirm with the customer.
+
+Create a custom app or automation to update a metafield/tag when confirmed.
