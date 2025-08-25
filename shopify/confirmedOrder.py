@@ -42,7 +42,7 @@ for order in orders:
     elif is_cod and not is_cancelled:
         confirmed_status = "Confirmed (COD)"
     else:
-        confirmed_status = "Not Confirmed"
+        confirmed_status = "Not Confirmed (Unpaid)"
 
     # Format date without +05:30
     created_at = datetime.fromisoformat(order.created_at.replace("Z", "+00:00")).strftime("%Y-%m-%d %H:%M:%S")
