@@ -34,19 +34,26 @@
 #                         [2,8],[4,6],[9,1],[8,4],[2,4],[7,8],[3,5],
 #                         [7,6],[8,6],[4,7],[25,60],[39,52],[16,63],[33,56]])
 # print(op)
+# output: 2028  [39, 52]
 
 
 
-def sqrt_newton(n, precision=1e-6):
-    if n < 0:
-        return None  # Square root not defined for negative numbers
-    if n == 0 or n == 1:
-        return n
-    
-    guess = n / 2.0
-    while abs(guess * guess - n) > precision:
-        guess = (guess + n / guess) / 2
-    return guess
+def merge(nums1, m, nums2, n):
+    i, j, k = m - 1, n - 1, m + n - 1
 
-print(int(sqrt_newton(25)))   # ~5.0
-print(int(sqrt_newton(2)))    # ~1.4142
+    while i >= 0 and j >= 0:
+        if nums1[i] > nums2[j]:
+            nums1[k] = nums1[i]
+            i -= 1
+        else:
+            nums1[k] = nums2[j]
+            j -= 1
+        k -= 1
+
+    while j >= 0:
+        nums1[k] = nums2[j]
+        j -= 1
+        k -= 1
+
+print(merge([-1, 0, 0, 3, 3, 3, 0, 0, 0], 6, [2, 5, 6], 3))
+
