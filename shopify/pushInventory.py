@@ -18,7 +18,7 @@ headers = {
 
 for index, row in df.iterrows():
     sku = row["SKU"]
-    new_qty = int(row["inventory quantity"])
+    new_qty = int(row["Inventory Quantity"])
 
     # Step 1: Get all products to find the variant with this SKU
     products_url = f"https://{SHOP_NAME}/admin/api/{API_VERSION}/products.json?limit=250"
@@ -47,6 +47,6 @@ for index, row in df.iterrows():
         "inventory_item_id": inventory_item_id,
         "available": new_qty
     }
-
+    
     res = requests.post(inventory_url, headers=headers, json=payload)
     print(f"Updated SKU {sku} (variant {variant_id}) to {new_qty}, status: {res.status_code}")
