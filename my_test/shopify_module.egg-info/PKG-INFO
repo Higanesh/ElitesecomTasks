@@ -1,0 +1,15 @@
+Metadata-Version: 2.4
+Name: shopify_module
+Version: 1.0.0
+Summary: Shopify integration utilities
+Author: Ganesh Gayakwad
+Requires-Python: >=3.8
+Requires-Dist: requests
+Requires-Dist: python-dotenv
+Requires-Dist: pandas
+Requires-Dist: openpyxl
+Requires-Dist: shopifyapi
+Dynamic: author
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary

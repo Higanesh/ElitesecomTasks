@@ -1,11 +1,8 @@
-from shopify_module import create_module
-import shopify
-from shopify_module import return_and_refund
-from shopify_module import products_and_orders 
+from shopify_module import * 
 
-
-# # Create a new customer
-# new_customer = create_module.create_customer()
+# Create a new customer
+new_customer = create_customer()
+print(new_customer)
 
 # # create a new order
 # new_order = create_module.create_order()
@@ -33,10 +30,16 @@ from shopify_module import products_and_orders
 # push_inventory = products_and_orders.push_inventory()
 # print(push_inventory)
 
-# fetch products by date range
-fetch_products = products_and_orders.fetch_products_by_date()
-print(fetch_products)
+# # fetch products by date range
+# fetch_products = products_and_orders.fetch_products_by_date()
+# print(fetch_products)
 
 # # return and refund a specific order
-# return_and_refund = return_and_refund.get_order()
-# print(return_and_refund)
+# order_input = input("Enter Shopify Order Number (e.g. 1035) or Order ID: ").strip()
+# order = return_and_refund.get_order(order_input)
+
+# if order:
+#     return_and_refund.create_return(order)
+#     return_and_refund.create_refund(order)
+# else:
+#     print("Order not found.")

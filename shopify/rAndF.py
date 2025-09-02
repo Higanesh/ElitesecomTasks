@@ -133,7 +133,7 @@ def create_refund(order):
 
 
 if __name__ == "__main__":
-    order_input = input("Enter Shopify Order Number (e.g. #1035) or Order ID: ").strip()
+    order_input = input("Enter Shopify Order Number (e.g. 1035) or Order ID: ").strip()
     order = get_order(order_input)
 
     if order:

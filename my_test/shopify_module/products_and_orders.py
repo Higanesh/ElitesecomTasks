@@ -123,7 +123,7 @@ def fetch_products_by_date():
     # Convert IST (GMT+5:30) to UTC
     ist = timezone(timedelta(hours=5, minutes=30))
     start_time_ist = datetime(2025, 8, 22, 0, 0, tzinfo=ist)
-    end_time_ist = datetime(2025, 8, 22, 11, 52, tzinfo=ist)
+    end_time_ist = datetime(2025, 8, 31, 23, 59, tzinfo=ist)
 
     # Convert IST to UTC automatically
     start_time_utc = start_time_ist.astimezone(timezone.utc)
@@ -133,7 +133,7 @@ def fetch_products_by_date():
         created_at_min=start_time_utc.isoformat(),
         created_at_max=end_time_utc.isoformat(),
         status='any',
-        limit=10
+        limit=30
     )
 
     # 3. Print orders

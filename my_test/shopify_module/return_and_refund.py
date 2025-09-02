@@ -130,12 +130,3 @@ def create_refund(order):
     else:
         print(f"❌ Refund failed: {resp.status_code} {resp.text}")
         return None
-
-
-if __name__ == "__main__":
-    order_input = input("Enter Shopify Order Number (e.g. #1035) or Order ID: ").strip()
-    order = get_order(order_input)
-
-    if order:
-        create_return(order)
-        create_refund(order)
