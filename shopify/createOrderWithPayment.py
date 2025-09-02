@@ -104,7 +104,7 @@ order_payload = {
         "customer": {"id": customer_id},
         "line_items": line_items,
         "shipping_address": shipping_address,
-        "financial_status": "pending"  # create order in pending status
+        "financial_status": "paid"  
     }
 }
 
@@ -122,60 +122,6 @@ order_obj = order_resp["order"]
 order_id = order_obj["id"]
 
 print(f"✅ Order created successfully! Order ID: {order_id}")
-
-# --- Debug: print order keys ---
-print("DEBUG ORDER DATA KEYS:", list(order_obj.keys()))
-
-# --- Get order total safely ---
-order_total = None
-if "current_total_price" in order_obj:
-    order_total = order_obj["current_total_price"]
-elif "total_price" in order_obj:
-    order_total = order_obj["total_price"]
-elif "current_total_price_set" in order_obj:
-    order_total = order_obj["current_total_price_set"]["shop_money"]["amount"]
-elif "total_price_set" in order_obj:
-    order_total = order_obj["total_price_set"]["shop_money"]["amount"]
-
-if not order_total:
-    raise ValueError("❌ Could not find total price in order response")
-
-print(f"✅ Order total found: {order_total}")
-
-# --- Update payment status ---
-# Step 1: Fetch order transactions (to get parent transaction ID if required)
-transactions_resp = requests.get(
-    f"{rest_url}/orders/{order_id}/transactions.json",
-    headers=rest_headers
-).json()
-
-parent_transaction_id = None
-if "transactions" in transactions_resp and transactions_resp["transactions"]:
-    parent_transaction_id = transactions_resp["transactions"][0]["id"]
-
-# Step 2: Capture payment (mark as paid)
-payment_url = f"{rest_url}/orders/{order_id}/transactions.json"
-payment_payload = {
-    "transaction": {
-        "kind": "capture",
-        "status": "success",
-        "amount": order_total,
-        "currency": order_obj["currency"]
-    }
-}
-
-# Attach parent transaction ID if available
-if parent_transaction_id:
-    payment_payload["transaction"]["parent_id"] = parent_transaction_id
-
-payment_response = requests.post(payment_url, headers=rest_headers, json=payment_payload)
-
-if payment_response.status_code == 201:
-    print("✅ Payment captured successfully. Order marked as PAID.")
-else:
-    print(f"❌ Payment capture failed: {payment_response.status_code}")
-    print(payment_response.text)
-
 
 # --- Fulfillment Update ---
 # Step 1: Get fulfillment orders
@@ -208,7 +154,7 @@ fulfill_resp_raw = requests.post(
 )
 
 print("Fulfillment Status Code:", fulfill_resp_raw.status_code)
-print("Fulfillment Response Text:", fulfill_resp_raw.text)
+# print("Fulfillment Response Text:", fulfill_resp_raw.text)
 
 try:
     fulfill_resp = fulfill_resp_raw.json()

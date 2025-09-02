@@ -36,7 +36,7 @@ def create_smart_collection():
     title = input("Enter smart collection name: ")
 
     # Ask condition details
-    print("\nAvailable columns: title, type, vendor, tag, price")
+    print("\nAvailable columns: title, type, vendor, tag")
     column = input("Enter column to filter on: ").strip()
 
     print("\nAvailable relations: equals, not_equals, greater_than, less_than, starts_with, ends_with, contains")

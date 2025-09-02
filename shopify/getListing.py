@@ -18,16 +18,24 @@ headers = {
 
 response = requests.get(url, headers=headers)
 products = response.json().get("products", [])
+if not products:
+    print("⚠️ No products found in Shopify store.")
+else:
+    rows = []
+    for product in products:
+        for variant in product.get("variants", []):
+            rows.append({
+                "Title": product["title"],
+                "SKU": variant["sku"],
+                "Inventory Quantity": variant["inventory_quantity"]
+            })
 
-rows = []
-for product in products:
-    for variant in product.get("variants", []):
-        rows.append({
-            "Title": product["title"],
-            "SKU": variant["sku"],
-            "Inventory Quantity": variant["inventory_quantity"]
-        })
+    df = pd.DataFrame(rows)
 
-df = pd.DataFrame(rows)
-df.to_excel(r"D:\myProjects\ElitesecomTasks\I-O Files\shopify_products.xlsx", index=False)
-print("Exported to shopify_products.xlsx")
+    # Export to Excel
+    output_file = r"D:\myProjects\ElitesecomTasks\I-O Files\shopify_products.xlsx"
+    try:
+        df.to_excel(output_file, index=False)
+        print(f"✅ Exported to {output_file}")
+    except Exception as e:
+        print(f"❌ Failed to write Excel file: {e}")
