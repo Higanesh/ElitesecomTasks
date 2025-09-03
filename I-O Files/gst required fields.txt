@@ -1,0 +1,39 @@
+✅ Summary
+
+So across all 21 sheets, the complete unique field set is:
+
+1. GSTIN / UIN of Recipient
+2. Name of Recipient (sometimes optional, sometimes auto)
+3. Invoice Number
+4. Invoice Date
+5. Invoice Value
+6. Document Type
+7. Document Number / Receipt Number
+8. Document Date
+9. Original Invoice/Document Reference (Number & Date)
+10. Place of Supply (POS)
+11. Invoice Type (Regular, SEZ, Deemed Export, etc.)
+12. Reverse Charge (Y/N)
+13. E-Commerce GSTIN
+14. Export Type
+15. Shipping Bill Number
+16. Shipping Bill Date
+17. Port Code
+18. Taxable Value
+19. Tax Rate (%)
+20. IGST Amount
+21. CGST Amount
+22. SGST/UTGST Amount
+23. Cess Amount
+24. Advance Amount Received
+25. Adjustment Amount
+26. HSN / SAC Code
+27. Description of Goods/Services
+28. UQC (Unit Quantity Code)
+29. Quantity
+30. Total Value (HSN summary)
+31. Nil/Exempt/Non-GST Supply Value
+32. Document Serial Number Range (From – To)
+33. Number of Documents Issued
+34. Number of Documents Cancelled
+35. Net Number of Documents Issued

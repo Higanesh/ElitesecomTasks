@@ -1,0 +1,142 @@
+📑 GSTR-1 Worksheets and Required Fields
+1. B2B (Registered invoices) – b2b
+
+GSTIN / UIN of Recipient
+Invoice Number, Date, Value
+Place of Supply (POS)
+Invoice Type (Regular/SEZ/Deemed Export)
+Reverse Charge
+E-Commerce GSTIN (if applicable)
+Taxable Value
+Tax Rate, IGST, CGST, SGST/UTGST, Cess
+
+2. B2B Amendments – b2ba
+
+Original Invoice Number, Date
+Revised Invoice Number, Date, Value
+POS, Invoice Type, Reverse Charge, E-Commerce GSTIN
+Taxable Value, Rate, IGST/CGST/SGST/Cess
+
+3. B2C (Large) – b2cl
+
+Invoice Number, Date, Value
+POS
+Invoice Type (E-Commerce if applicable)
+Taxable Value, Rate, IGST/CGST/SGST/Cess
+
+4. B2C (Large) Amendments – b2cla
+
+Original Invoice Reference
+Revised Invoice Number, Date, Value
+POS, Invoice Type, Tax details
+
+5. B2C (Small) – b2cs
+
+POS
+Type (Inter/Intrastate, E-Commerce Y/N)
+Taxable Value, Rate, IGST/CGST/SGST/Cess
+
+6. B2C (Small) Amendments – b2csa
+
+Original details reference
+Revised POS, Type, Values, Taxes
+
+7. Credit/Debit Notes – Registered – cdnr
+
+GSTIN of Recipient
+Note Number, Date, Type (Credit/Debit/Refund)
+Original Invoice Number & Date
+Note Value
+Taxable Value, Rate, IGST/CGST/SGST/Cess
+
+8. Credit/Debit Notes Amendments – cdra
+
+Original Note Reference (No. & Date)
+Revised Note Number, Date, Value
+Taxes (as above)
+
+9. Credit/Debit Notes – Unregistered – cdnur
+
+Note Number, Date, Type
+POS
+Original Invoice Ref (if any)
+Note Value
+Taxable Value, Rate, IGST/CGST/SGST/Cess
+
+10. Credit/Debit Notes – Unregistered Amendments – cdnura
+
+Original Note Reference
+Revised Note Number, Date, Value
+POS, Tax details
+
+11. Exports – exp
+
+Export Type (WPAY/WOPAY/SEZ/Deemed)
+Invoice Number, Date, Value
+Shipping Bill Number, Date
+Port Code
+Taxable Value, Rate, IGST/Cess
+
+12. Exports Amendments – expa
+
+Original Invoice Ref
+Revised Invoice Details (No., Date, Value)
+Revised Shipping Bill No., Date, Port Code
+Tax details
+
+13. Advance Receipts – at
+
+POS
+Advance Receipt Number, Date, Value
+Tax Rate, Taxable Value, IGST/CGST/SGST/Cess
+
+14. Advance Receipt Amendments – ata
+
+Original Advance Ref (No., Date)
+Revised Receipt Details
+Tax details
+
+15. Advance Adjustments – atadj
+
+POS
+Adjustment Number, Date
+Adjustment Amount
+Tax Rate, IGST/CGST/SGST/Cess
+
+16. Advance Adjustment Amendments – atadja
+
+Original Adjustment Ref
+Revised Adjustment Details
+Tax details
+
+17. Nil/Exempt/Non-GST Supplies – exemp
+
+Supply Type (Nil / Exempt / Non-GST)
+POS (sometimes optional)
+Value of Supplies
+
+18. HSN Summary – hsn
+
+HSN / SAC Code
+Description of Goods/Services
+UQC (Unit Quantity Code)
+Quantity
+Total Value
+Taxable Value
+Tax Rate, IGST/CGST/SGST/Cess
+
+19. Documents Issued – doc
+
+Document Type (Invoices, Credit Notes, Delivery Challans etc.)
+Serial Number Range (From–To)
+Number of Documents Issued
+Number of Documents Cancelled
+Net Documents Issued
+
+20. Master Sheet – master
+
+Auto-populated summary of all sections (no entry fields).
+
+21. Help Sheet – help
+
+Instructions only (no entry fields).
