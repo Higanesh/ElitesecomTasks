@@ -1,8 +1,8 @@
-from shopify_module import * 
+# from shopify_module import * 
 
-# Create a new customer
-new_customer = create_customer()
-print(new_customer)
+# # Create a new customer
+# new_customer = create_customer()
+# print(new_customer)
 
 # # create a new order
 # new_order = create_module.create_order()
