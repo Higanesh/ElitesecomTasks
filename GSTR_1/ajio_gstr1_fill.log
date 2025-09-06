@@ -1,0 +1,16 @@
+2025-09-06 15:39:13,729 - INFO - Loaded GST file 'C:\ganesh\ElitesecomTasks\I-O Files\gstr_1 test files\ajio\DropShipGstReports.xlsx' rows=109
+2025-09-06 15:39:13,758 - INFO - Loaded RTV file 'C:\ganesh\ElitesecomTasks\I-O Files\gstr_1 test files\ajio\DropShipRtvReports.xlsx' rows=16
+2025-09-06 15:39:13,759 - INFO - Mapped B2B cols: gstin=None, invoice_no=None, total_price=Total Price, state=None, rate=None
+2025-09-06 15:39:13,768 - INFO - Built B2B rows: 109
+2025-09-06 15:39:13,771 - INFO - Mapped CDNR cols: credit_no=Credit Note Number, total_price=None, state=None
+2025-09-06 15:39:13,772 - INFO - Built CDNR rows: 0
+2025-09-06 15:39:13,896 - INFO - Wrote output to C:\ganesh\ElitesecomTasks\I-O Files\gstr_1 test files\ajio\ajio_gstr1.xlsx
+2025-09-06 15:44:12,107 - INFO - Loaded GST file 'C:\ganesh\ElitesecomTasks\I-O Files\gstr_1 test files\ajio\DropShipGstReports.xlsx' rows=109
+2025-09-06 15:44:12,132 - INFO - Loaded RTV file 'C:\ganesh\ElitesecomTasks\I-O Files\gstr_1 test files\ajio\DropShipRtvReports.xlsx' rows=16
+2025-09-06 15:44:12,139 - INFO - Built 0 B2B rows
+2025-09-06 15:44:12,141 - INFO - Built 0 CDNR rows
+2025-09-06 15:44:23,920 - INFO - Loaded GST file 'C:\ganesh\ElitesecomTasks\I-O Files\gstr_1 test files\ajio\DropShipGstReports.xlsx' rows=109
+2025-09-06 15:44:23,948 - INFO - Loaded RTV file 'C:\ganesh\ElitesecomTasks\I-O Files\gstr_1 test files\ajio\DropShipRtvReports.xlsx' rows=16
+2025-09-06 15:44:23,954 - INFO - Built 0 B2B rows
+2025-09-06 15:44:23,956 - INFO - Built 0 CDNR rows
+2025-09-06 15:44:24,000 - INFO - Saved GSTR1 Ajio report to C:\ganesh\ElitesecomTasks\I-O Files\gstr_1 test files\ajio\ajio_gstr1.xlsx

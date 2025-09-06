@@ -1,0 +1,212 @@
+2025-09-06 12:27:14,424 - INFO - Loaded packed file: C:\ganesh\ElitesecomTasks\I-O Files\gstr_1 test files\myntra\packed.csv with 1588 rows
+2025-09-06 12:27:14,447 - INFO - Loaded RT file: C:\ganesh\ElitesecomTasks\I-O Files\gstr_1 test files\myntra\rt.csv with 424 rows
+2025-09-06 12:27:14,463 - INFO - Loaded RTO file: C:\ganesh\ElitesecomTasks\I-O Files\gstr_1 test files\myntra\rto.csv with 218 rows
+2025-09-06 12:27:14,483 - INFO - Processed ANDHRA PRADESH: Taxable=29422.86
+2025-09-06 12:27:14,483 - INFO - Processed ARUNACHAL PRADESH: Taxable=839.05
+2025-09-06 12:27:14,484 - INFO - Processed ASSAM: Taxable=10551.43
+2025-09-06 12:27:14,484 - INFO - Processed BIHAR: Taxable=120748.57
+2025-09-06 12:27:14,484 - INFO - Processed CHANDIGARH: Taxable=4702.86
+2025-09-06 12:27:14,484 - INFO - Processed CHHATISHGARH: Taxable=25367.62
+2025-09-06 12:27:14,484 - INFO - Processed DADRA AND NAGAR HAVELI AND DAMAN AND DIU: Taxable=2460.95
+2025-09-06 12:27:14,484 - INFO - Processed DELHI: Taxable=77317.14
+2025-09-06 12:27:14,485 - INFO - Processed GOA: Taxable=2602.86
+2025-09-06 12:27:14,485 - INFO - Processed GUJARAT: Taxable=68410.89
+2025-09-06 12:27:14,485 - INFO - Processed HARYANA: Taxable=63915.24
+2025-09-06 12:27:14,485 - INFO - Processed HIMACHAL PRADESH: Taxable=4566.67
+2025-09-06 12:27:14,485 - INFO - Processed JAMMU AND KASHMIR: Taxable=-743.81
+2025-09-06 12:27:14,485 - INFO - Processed JHARKHAND: Taxable=30401.9
+2025-09-06 12:27:14,485 - INFO - Processed KARNATAKA: Taxable=72110.48
+2025-09-06 12:27:14,485 - INFO - Processed KERALA: Taxable=7927.62
+2025-09-06 12:27:14,486 - INFO - Processed MADHYA PRADESH: Taxable=69709.52
+2025-09-06 12:27:14,486 - INFO - Processed MAHARASHTRA: Taxable=129190.48
+2025-09-06 12:27:14,486 - INFO - Processed ODISHA: Taxable=22563.81
+2025-09-06 12:27:14,486 - INFO - Processed PUNJAB: Taxable=12457.14
+2025-09-06 12:27:14,486 - INFO - Processed RAJASTHAN: Taxable=22683.81
+2025-09-06 12:27:14,486 - INFO - Processed SIKKIM: Taxable=1052.38
+2025-09-06 12:27:14,486 - INFO - Processed TAMILNADU: Taxable=22833.33
+2025-09-06 12:27:14,487 - INFO - Processed TELANGANA: Taxable=43745.18
+2025-09-06 12:27:14,487 - INFO - Processed TRIPURA: Taxable=954.29
+2025-09-06 12:27:14,487 - INFO - Processed UTTAR PRADESH: Taxable=230444.52
+2025-09-06 12:27:14,487 - INFO - Processed UTTARAKHAND: Taxable=23688.57
+2025-09-06 12:27:14,487 - INFO - Processed WEST BENGAL: Taxable=38208.57
+2025-09-06 12:41:44,419 - INFO - Loaded packed file: C:\ganesh\ElitesecomTasks\I-O Files\gstr_1 test files\myntra\packed.csv with 1588 rows
+2025-09-06 12:41:44,430 - INFO - Loaded RT file: C:\ganesh\ElitesecomTasks\I-O Files\gstr_1 test files\myntra\rt.csv with 424 rows
+2025-09-06 12:41:44,452 - INFO - Loaded RTO file: C:\ganesh\ElitesecomTasks\I-O Files\gstr_1 test files\myntra\rto.csv with 218 rows
+2025-09-06 12:44:15,074 - INFO - Loaded packed file: C:\ganesh\ElitesecomTasks\I-O Files\gstr_1 test files\myntra\packed.csv with 1588 rows
+2025-09-06 12:44:15,085 - INFO - Loaded RT file: C:\ganesh\ElitesecomTasks\I-O Files\gstr_1 test files\myntra\rt.csv with 424 rows
+2025-09-06 12:44:15,092 - INFO - Loaded RTO file: C:\ganesh\ElitesecomTasks\I-O Files\gstr_1 test files\myntra\rto.csv with 218 rows
+2025-09-06 12:44:15,103 - INFO - Processed ANDHRA PRADESH at 5.0% GST: Taxable=29422.86
+2025-09-06 12:44:15,103 - INFO - Processed ANDHRA PRADESH at 12.0% GST: Taxable=0.0
+2025-09-06 12:44:15,104 - INFO - Processed ARUNACHAL PRADESH at 5.0% GST: Taxable=839.05
+2025-09-06 12:44:15,104 - INFO - Processed ASSAM at 5.0% GST: Taxable=10551.43
+2025-09-06 12:44:15,104 - INFO - Processed BIHAR at 5.0% GST: Taxable=120748.57
+2025-09-06 12:44:15,104 - INFO - Processed CHANDIGARH at 5.0% GST: Taxable=4702.86
+2025-09-06 12:44:15,104 - INFO - Processed CHHATISHGARH at 5.0% GST: Taxable=25367.62
+2025-09-06 12:44:15,104 - INFO - Processed DADRA AND NAGAR HAVELI AND DAMAN AND DIU at 5.0% GST: Taxable=2460.95
+2025-09-06 12:44:15,104 - INFO - Processed DELHI at 5.0% GST: Taxable=77317.14
+2025-09-06 12:44:15,105 - INFO - Processed GOA at 5.0% GST: Taxable=2602.86
+2025-09-06 12:44:15,105 - INFO - Processed GUJARAT at 5.0% GST: Taxable=67245.71
+2025-09-06 12:44:15,105 - INFO - Processed GUJARAT at 12.0% GST: Taxable=1165.18
+2025-09-06 12:44:15,105 - INFO - Processed HARYANA at 5.0% GST: Taxable=63915.24
+2025-09-06 12:44:15,105 - INFO - Processed HIMACHAL PRADESH at 5.0% GST: Taxable=4566.67
+2025-09-06 12:44:15,105 - INFO - Processed JAMMU AND KASHMIR at 5.0% GST: Taxable=-743.81
+2025-09-06 12:44:15,105 - INFO - Processed JHARKHAND at 5.0% GST: Taxable=30401.9
+2025-09-06 12:44:15,106 - INFO - Processed KARNATAKA at 5.0% GST: Taxable=72110.48
+2025-09-06 12:44:15,106 - INFO - Processed KERALA at 5.0% GST: Taxable=7927.62
+2025-09-06 12:44:15,106 - INFO - Processed MADHYA PRADESH at 5.0% GST: Taxable=69709.52
+2025-09-06 12:44:15,106 - INFO - Processed MAHARASHTRA at 5.0% GST: Taxable=129190.48
+2025-09-06 12:44:15,106 - INFO - Processed MAHARASHTRA at 12.0% GST: Taxable=0.0
+2025-09-06 12:44:15,106 - INFO - Processed ODISHA at 5.0% GST: Taxable=22563.81
+2025-09-06 12:44:15,106 - INFO - Processed PUNJAB at 5.0% GST: Taxable=12457.14
+2025-09-06 12:44:15,106 - INFO - Processed RAJASTHAN at 5.0% GST: Taxable=22683.81
+2025-09-06 12:44:15,107 - INFO - Processed SIKKIM at 5.0% GST: Taxable=1052.38
+2025-09-06 12:44:15,107 - INFO - Processed TAMILNADU at 5.0% GST: Taxable=22833.33
+2025-09-06 12:44:15,107 - INFO - Processed TELANGANA at 5.0% GST: Taxable=42580.0
+2025-09-06 12:44:15,107 - INFO - Processed TELANGANA at 12.0% GST: Taxable=1165.18
+2025-09-06 12:44:15,107 - INFO - Processed TRIPURA at 5.0% GST: Taxable=954.29
+2025-09-06 12:44:15,107 - INFO - Processed UTTAR PRADESH at 5.0% GST: Taxable=226140.95
+2025-09-06 12:44:15,107 - INFO - Processed UTTAR PRADESH at 12.0% GST: Taxable=4303.57
+2025-09-06 12:44:15,107 - INFO - Processed UTTARAKHAND at 5.0% GST: Taxable=23688.57
+2025-09-06 12:44:15,108 - INFO - Processed WEST BENGAL at 5.0% GST: Taxable=38208.57
+2025-09-06 14:13:52,553 - ERROR - Error during processing: 'MyntraGstr1Processor' object has no attribute 'process'
+2025-09-06 14:15:01,177 - ERROR - Error during processing: 'MyntraGstr1Processor' object has no attribute 'df_packed'
+2025-09-06 14:23:08,979 - INFO - Loaded packed file: C:\ganesh\ElitesecomTasks\I-O Files\gstr_1 test files\myntra\packed.csv with 1588 rows
+2025-09-06 14:23:08,990 - INFO - Loaded RT file: C:\ganesh\ElitesecomTasks\I-O Files\gstr_1 test files\myntra\rt.csv with 424 rows
+2025-09-06 14:23:08,998 - INFO - Loaded RTO file: C:\ganesh\ElitesecomTasks\I-O Files\gstr_1 test files\myntra\rto.csv with 218 rows
+2025-09-06 14:23:44,965 - INFO - Loaded packed file: C:\ganesh\ElitesecomTasks\I-O Files\gstr_1 test files\myntra\packed.csv with 1588 rows
+2025-09-06 14:23:44,975 - INFO - Loaded RT file: C:\ganesh\ElitesecomTasks\I-O Files\gstr_1 test files\myntra\rt.csv with 424 rows
+2025-09-06 14:23:44,983 - INFO - Loaded RTO file: C:\ganesh\ElitesecomTasks\I-O Files\gstr_1 test files\myntra\rto.csv with 218 rows
+2025-09-06 14:23:44,993 - INFO - Processed ANDHRA PRADESH at 5.0% GST: Taxable=29422.86
+2025-09-06 14:23:44,993 - INFO - Processed ANDHRA PRADESH at 12.0% GST: Taxable=0.0
+2025-09-06 14:23:44,993 - INFO - Processed ARUNACHAL PRADESH at 5.0% GST: Taxable=839.05
+2025-09-06 14:23:44,993 - INFO - Processed ASSAM at 5.0% GST: Taxable=10551.43
+2025-09-06 14:23:44,993 - INFO - Processed BIHAR at 5.0% GST: Taxable=120748.57
+2025-09-06 14:23:44,993 - INFO - Processed CHANDIGARH at 5.0% GST: Taxable=4702.86
+2025-09-06 14:23:44,994 - INFO - Processed CHHATISHGARH at 5.0% GST: Taxable=25367.62
+2025-09-06 14:23:44,994 - INFO - Processed DADRA AND NAGAR HAVELI AND DAMAN AND DIU at 5.0% GST: Taxable=2460.95
+2025-09-06 14:23:44,994 - INFO - Processed DELHI at 5.0% GST: Taxable=77317.14
+2025-09-06 14:23:44,994 - INFO - Processed GOA at 5.0% GST: Taxable=2602.86
+2025-09-06 14:23:44,994 - INFO - Processed GUJARAT at 5.0% GST: Taxable=67245.71
+2025-09-06 14:23:44,994 - INFO - Processed GUJARAT at 12.0% GST: Taxable=1165.18
+2025-09-06 14:23:44,994 - INFO - Processed HARYANA at 5.0% GST: Taxable=63915.24
+2025-09-06 14:23:44,995 - INFO - Processed HIMACHAL PRADESH at 5.0% GST: Taxable=4566.67
+2025-09-06 14:23:44,995 - INFO - Processed JAMMU AND KASHMIR at 5.0% GST: Taxable=-743.81
+2025-09-06 14:23:44,995 - INFO - Processed JHARKHAND at 5.0% GST: Taxable=30401.9
+2025-09-06 14:23:44,995 - INFO - Processed KARNATAKA at 5.0% GST: Taxable=72110.48
+2025-09-06 14:23:44,995 - INFO - Processed KERALA at 5.0% GST: Taxable=7927.62
+2025-09-06 14:23:44,995 - INFO - Processed MADHYA PRADESH at 5.0% GST: Taxable=69709.52
+2025-09-06 14:23:44,995 - INFO - Processed MAHARASHTRA at 5.0% GST: Taxable=129190.48
+2025-09-06 14:23:44,996 - INFO - Processed MAHARASHTRA at 12.0% GST: Taxable=0.0
+2025-09-06 14:23:44,996 - INFO - Processed ODISHA at 5.0% GST: Taxable=22563.81
+2025-09-06 14:23:44,996 - INFO - Processed PUNJAB at 5.0% GST: Taxable=12457.14
+2025-09-06 14:23:44,996 - INFO - Processed RAJASTHAN at 5.0% GST: Taxable=22683.81
+2025-09-06 14:23:44,996 - INFO - Processed SIKKIM at 5.0% GST: Taxable=1052.38
+2025-09-06 14:23:44,996 - INFO - Processed TAMILNADU at 5.0% GST: Taxable=22833.33
+2025-09-06 14:23:44,996 - INFO - Processed TELANGANA at 5.0% GST: Taxable=42580.0
+2025-09-06 14:23:44,996 - INFO - Processed TELANGANA at 12.0% GST: Taxable=1165.18
+2025-09-06 14:23:44,997 - INFO - Processed TRIPURA at 5.0% GST: Taxable=954.29
+2025-09-06 14:23:44,997 - INFO - Processed UTTAR PRADESH at 5.0% GST: Taxable=226140.95
+2025-09-06 14:23:44,997 - INFO - Processed UTTAR PRADESH at 12.0% GST: Taxable=4303.57
+2025-09-06 14:23:44,997 - INFO - Processed UTTARAKHAND at 5.0% GST: Taxable=23688.57
+2025-09-06 14:23:44,997 - INFO - Processed WEST BENGAL at 5.0% GST: Taxable=38208.57
+2025-09-06 14:27:07,768 - INFO - Processed ANDHRA PRADESH at 5.0% GST: Taxable=29422.86
+2025-09-06 14:27:07,768 - INFO - Processed ANDHRA PRADESH at 12.0% GST: Taxable=0.0
+2025-09-06 14:27:07,768 - INFO - Processed ARUNACHAL PRADESH at 5.0% GST: Taxable=839.05
+2025-09-06 14:27:07,769 - INFO - Processed ASSAM at 5.0% GST: Taxable=10551.43
+2025-09-06 14:27:07,769 - INFO - Processed BIHAR at 5.0% GST: Taxable=120748.57
+2025-09-06 14:27:07,769 - INFO - Processed CHANDIGARH at 5.0% GST: Taxable=4702.86
+2025-09-06 14:27:07,769 - INFO - Processed CHHATISHGARH at 5.0% GST: Taxable=25367.62
+2025-09-06 14:27:07,770 - INFO - Processed DADRA AND NAGAR HAVELI AND DAMAN AND DIU at 5.0% GST: Taxable=2460.95
+2025-09-06 14:27:07,770 - INFO - Processed DELHI at 5.0% GST: Taxable=77317.14
+2025-09-06 14:27:07,770 - INFO - Processed GOA at 5.0% GST: Taxable=2602.86
+2025-09-06 14:27:07,770 - INFO - Processed GUJARAT at 5.0% GST: Taxable=67245.71
+2025-09-06 14:27:07,771 - INFO - Processed GUJARAT at 12.0% GST: Taxable=1165.18
+2025-09-06 14:27:07,771 - INFO - Processed HARYANA at 5.0% GST: Taxable=63915.24
+2025-09-06 14:27:07,771 - INFO - Processed HIMACHAL PRADESH at 5.0% GST: Taxable=4566.67
+2025-09-06 14:27:07,772 - INFO - Processed JAMMU AND KASHMIR at 5.0% GST: Taxable=-743.81
+2025-09-06 14:27:07,772 - INFO - Processed JHARKHAND at 5.0% GST: Taxable=30401.9
+2025-09-06 14:27:07,773 - INFO - Processed KARNATAKA at 5.0% GST: Taxable=72110.48
+2025-09-06 14:27:07,773 - INFO - Processed KERALA at 5.0% GST: Taxable=7927.62
+2025-09-06 14:27:07,774 - INFO - Processed MADHYA PRADESH at 5.0% GST: Taxable=69709.52
+2025-09-06 14:27:07,775 - INFO - Processed MAHARASHTRA at 5.0% GST: Taxable=129190.48
+2025-09-06 14:27:07,775 - INFO - Processed MAHARASHTRA at 12.0% GST: Taxable=0.0
+2025-09-06 14:27:07,776 - INFO - Processed ODISHA at 5.0% GST: Taxable=22563.81
+2025-09-06 14:27:07,776 - INFO - Processed PUNJAB at 5.0% GST: Taxable=12457.14
+2025-09-06 14:27:07,777 - INFO - Processed RAJASTHAN at 5.0% GST: Taxable=22683.81
+2025-09-06 14:27:07,777 - INFO - Processed SIKKIM at 5.0% GST: Taxable=1052.38
+2025-09-06 14:27:07,778 - INFO - Processed TAMILNADU at 5.0% GST: Taxable=22833.33
+2025-09-06 14:27:07,778 - INFO - Processed TELANGANA at 5.0% GST: Taxable=42580.0
+2025-09-06 14:27:07,779 - INFO - Processed TELANGANA at 12.0% GST: Taxable=1165.18
+2025-09-06 14:27:07,779 - INFO - Processed TRIPURA at 5.0% GST: Taxable=954.29
+2025-09-06 14:27:07,780 - INFO - Processed UTTAR PRADESH at 5.0% GST: Taxable=226140.95
+2025-09-06 14:27:07,780 - INFO - Processed UTTAR PRADESH at 12.0% GST: Taxable=4303.57
+2025-09-06 14:27:07,781 - INFO - Processed UTTARAKHAND at 5.0% GST: Taxable=23688.57
+2025-09-06 14:27:07,841 - INFO - Processed WEST BENGAL at 5.0% GST: Taxable=38208.57
+2025-09-06 14:30:13,005 - INFO - Loaded packed file: C:\ganesh\ElitesecomTasks\I-O Files\gstr_1 test files\myntra\packed.csv with 1588 rows
+2025-09-06 14:30:13,018 - INFO - Loaded RT file: C:\ganesh\ElitesecomTasks\I-O Files\gstr_1 test files\myntra\rt.csv with 424 rows
+2025-09-06 14:30:13,029 - INFO - Loaded RTO file: C:\ganesh\ElitesecomTasks\I-O Files\gstr_1 test files\myntra\rto.csv with 218 rows
+2025-09-06 14:30:13,042 - INFO - Processed ANDHRA PRADESH at 5.0% GST: Taxable=29422.86
+2025-09-06 14:30:13,042 - INFO - Processed ARUNACHAL PRADESH at 5.0% GST: Taxable=839.05
+2025-09-06 14:30:13,042 - INFO - Processed ASSAM at 5.0% GST: Taxable=10551.43
+2025-09-06 14:30:13,043 - INFO - Processed BIHAR at 5.0% GST: Taxable=120748.57
+2025-09-06 14:30:13,043 - INFO - Processed CHANDIGARH at 5.0% GST: Taxable=4702.86
+2025-09-06 14:30:13,043 - INFO - Processed CHHATISHGARH at 5.0% GST: Taxable=25367.62
+2025-09-06 14:30:13,043 - INFO - Processed DADRA AND NAGAR HAVELI AND DAMAN AND DIU at 5.0% GST: Taxable=2460.95
+2025-09-06 14:30:13,044 - INFO - Processed DELHI at 5.0% GST: Taxable=77317.14
+2025-09-06 14:30:13,044 - INFO - Processed GOA at 5.0% GST: Taxable=2602.86
+2025-09-06 14:30:13,044 - INFO - Processed GUJARAT at 5.0% GST: Taxable=67245.71
+2025-09-06 14:30:13,045 - INFO - Processed GUJARAT at 12.0% GST: Taxable=1165.18
+2025-09-06 14:30:13,046 - INFO - Processed HARYANA at 5.0% GST: Taxable=63915.24
+2025-09-06 14:30:13,047 - INFO - Processed HIMACHAL PRADESH at 5.0% GST: Taxable=4566.67
+2025-09-06 14:30:13,047 - INFO - Processed JAMMU AND KASHMIR at 5.0% GST: Taxable=-743.81
+2025-09-06 14:30:13,048 - INFO - Processed JHARKHAND at 5.0% GST: Taxable=30401.9
+2025-09-06 14:30:13,048 - INFO - Processed KARNATAKA at 5.0% GST: Taxable=72110.48
+2025-09-06 14:30:13,049 - INFO - Processed KERALA at 5.0% GST: Taxable=7927.62
+2025-09-06 14:30:13,049 - INFO - Processed MADHYA PRADESH at 5.0% GST: Taxable=69709.52
+2025-09-06 14:30:13,049 - INFO - Processed MAHARASHTRA at 5.0% GST: Taxable=129190.48
+2025-09-06 14:30:13,050 - INFO - Processed ODISHA at 5.0% GST: Taxable=22563.81
+2025-09-06 14:30:13,051 - INFO - Processed PUNJAB at 5.0% GST: Taxable=12457.14
+2025-09-06 14:30:13,051 - INFO - Processed RAJASTHAN at 5.0% GST: Taxable=22683.81
+2025-09-06 14:30:13,051 - INFO - Processed SIKKIM at 5.0% GST: Taxable=1052.38
+2025-09-06 14:30:13,052 - INFO - Processed TAMILNADU at 5.0% GST: Taxable=22833.33
+2025-09-06 14:30:13,052 - INFO - Processed TELANGANA at 5.0% GST: Taxable=42580.0
+2025-09-06 14:30:13,052 - INFO - Processed TELANGANA at 12.0% GST: Taxable=1165.18
+2025-09-06 14:30:13,053 - INFO - Processed TRIPURA at 5.0% GST: Taxable=954.29
+2025-09-06 14:30:13,053 - INFO - Processed UTTAR PRADESH at 5.0% GST: Taxable=226140.95
+2025-09-06 14:30:13,054 - INFO - Processed UTTAR PRADESH at 12.0% GST: Taxable=4303.57
+2025-09-06 14:30:13,054 - INFO - Processed UTTARAKHAND at 5.0% GST: Taxable=23688.57
+2025-09-06 14:30:13,054 - INFO - Processed WEST BENGAL at 5.0% GST: Taxable=38208.57
+2025-09-06 14:39:56,664 - INFO - Loaded packed file: C:\ganesh\ElitesecomTasks\I-O Files\gstr_1 test files\myntra\packed.csv with 1588 rows
+2025-09-06 14:39:56,676 - INFO - Loaded RT file: C:\ganesh\ElitesecomTasks\I-O Files\gstr_1 test files\myntra\rt.csv with 424 rows
+2025-09-06 14:39:56,685 - INFO - Loaded RTO file: C:\ganesh\ElitesecomTasks\I-O Files\gstr_1 test files\myntra\rto.csv with 218 rows
+2025-09-06 14:39:56,697 - INFO - Processed ANDHRA PRADESH at 5.0% GST: Taxable=29422.86
+2025-09-06 14:39:56,697 - INFO - Processed ARUNACHAL PRADESH at 5.0% GST: Taxable=839.05
+2025-09-06 14:39:56,698 - INFO - Processed ASSAM at 5.0% GST: Taxable=10551.43
+2025-09-06 14:39:56,698 - INFO - Processed BIHAR at 5.0% GST: Taxable=120748.57
+2025-09-06 14:39:56,698 - INFO - Processed CHANDIGARH at 5.0% GST: Taxable=4702.86
+2025-09-06 14:39:56,698 - INFO - Processed CHHATISHGARH at 5.0% GST: Taxable=25367.62
+2025-09-06 14:39:56,698 - INFO - Processed DADRA AND NAGAR HAVELI AND DAMAN AND DIU at 5.0% GST: Taxable=2460.95
+2025-09-06 14:39:56,699 - INFO - Processed DELHI at 5.0% GST: Taxable=77317.14
+2025-09-06 14:39:56,699 - INFO - Processed GOA at 5.0% GST: Taxable=2602.86
+2025-09-06 14:39:56,699 - INFO - Processed GUJARAT at 5.0% GST: Taxable=67245.71
+2025-09-06 14:39:56,700 - INFO - Processed GUJARAT at 12.0% GST: Taxable=1165.18
+2025-09-06 14:39:56,700 - INFO - Processed HARYANA at 5.0% GST: Taxable=63915.24
+2025-09-06 14:39:56,701 - INFO - Processed HIMACHAL PRADESH at 5.0% GST: Taxable=4566.67
+2025-09-06 14:39:56,702 - INFO - Processed JAMMU AND KASHMIR at 5.0% GST: Taxable=-743.81
+2025-09-06 14:39:56,703 - INFO - Processed JHARKHAND at 5.0% GST: Taxable=30401.9
+2025-09-06 14:39:56,704 - INFO - Processed KARNATAKA at 5.0% GST: Taxable=72110.48
+2025-09-06 14:39:56,704 - INFO - Processed KERALA at 5.0% GST: Taxable=7927.62
+2025-09-06 14:39:56,705 - INFO - Processed MADHYA PRADESH at 5.0% GST: Taxable=69709.52
+2025-09-06 14:39:56,705 - INFO - Processed MAHARASHTRA at 5.0% GST: Taxable=129190.48
+2025-09-06 14:39:56,706 - INFO - Processed ODISHA at 5.0% GST: Taxable=22563.81
+2025-09-06 14:39:56,706 - INFO - Processed PUNJAB at 5.0% GST: Taxable=12457.14
+2025-09-06 14:39:56,706 - INFO - Processed RAJASTHAN at 5.0% GST: Taxable=22683.81
+2025-09-06 14:39:56,707 - INFO - Processed SIKKIM at 5.0% GST: Taxable=1052.38
+2025-09-06 14:39:56,707 - INFO - Processed TAMILNADU at 5.0% GST: Taxable=22833.33
+2025-09-06 14:39:56,709 - INFO - Processed TELANGANA at 5.0% GST: Taxable=42580.0
+2025-09-06 14:39:56,711 - INFO - Processed TELANGANA at 12.0% GST: Taxable=1165.18
+2025-09-06 14:39:56,712 - INFO - Processed TRIPURA at 5.0% GST: Taxable=954.29
+2025-09-06 14:39:56,712 - INFO - Processed UTTAR PRADESH at 5.0% GST: Taxable=226140.95
+2025-09-06 14:39:56,713 - INFO - Processed UTTAR PRADESH at 12.0% GST: Taxable=4303.57
+2025-09-06 14:39:56,713 - INFO - Processed UTTARAKHAND at 5.0% GST: Taxable=23688.57
+2025-09-06 14:39:56,713 - INFO - Processed WEST BENGAL at 5.0% GST: Taxable=38208.57
