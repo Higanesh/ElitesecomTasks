@@ -4,7 +4,7 @@ from workbook import ExcelWriter
 
 
 class MyntraGstr1Processor:
-    def __init__(self, packed_file, rt_file=None, rto_file=None, log_file="myntra_gstr1.log"):
+    def __init__(self, packed_file, rt_file=None, rto_file=None, log_file="myntra_gst.log"):
         self.packed_file = packed_file
         self.rt_file = rt_file
         self.rto_file = rto_file
@@ -153,15 +153,15 @@ class MyntraGstr1Processor:
 
 # --------- MAIN SCRIPT ---------
 if __name__ == "__main__":
-    packed_file = r"C:\ganesh\ElitesecomTasks\I-O Files\gstr_1 test files\myntra\packed.csv"
-    rt_file = r"C:\ganesh\ElitesecomTasks\I-O Files\gstr_1 test files\myntra\rt.csv"
-    rto_file = r"C:\ganesh\ElitesecomTasks\I-O Files\gstr_1 test files\myntra\rto.csv"
+    packed_file = r"D:\myProjects\ElitesecomTasks\GSTR_1\gstr_1 test files\myntra\packed.csv"
+    rt_file = r"D:\myProjects\ElitesecomTasks\GSTR_1\gstr_1 test files\myntra\rt.csv"
+    rto_file = r"D:\myProjects\ElitesecomTasks\GSTR_1\gstr_1 test files\myntra\rto.csv"
 
     processor = MyntraGstr1Processor(packed_file, rt_file, rto_file)
     data = processor.process_data()
 
     # Write to Excel with your common ExcelWriter
-    excel_file = r"C:\ganesh\ElitesecomTasks\I-O Files\gstr_1 test files\myntra\myntra_gstr1.xlsx"
+    excel_file = r"D:\myProjects\ElitesecomTasks\GSTR_1\gstr_1 test files\myntra\myntra_gstr1.xlsx"
     excel_writer = ExcelWriter(excel_file, "B2CS Summary")
     excel_writer.write_data(data)
     excel_writer.save()

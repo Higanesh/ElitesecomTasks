@@ -56,8 +56,8 @@ class LimeroadGSTProcessor:
 
 # ------------------ Manual Test ------------------
 if __name__ == "__main__":
-    input_file = r"C:\Users\st\Desktop\Rachit\GST_format\Limeroad\input_files\limeroad_report.xlsx"
-    output_file = r"C:\Users\st\Desktop\Rachit\GST_format\Limeroad\input_files\final.xlsx"
+    input_file = r"D:\myProjects\ElitesecomTasks\GSTR_1\gstr_1 test files\limeroad\limeroad_report.xls"
+    output_file = r"D:\myProjects\ElitesecomTasks\GSTR_1\gstr_1 test files\limeroad\limeroad_gstr1.xlsx"
 
     processor = LimeroadGSTProcessor(input_file)
 

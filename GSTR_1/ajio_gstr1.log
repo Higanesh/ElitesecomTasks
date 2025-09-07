@@ -1,9 +1,0 @@
-2025-09-06 14:59:52,439 - INFO - Loaded GST Report with 109 rows
-2025-09-06 14:59:52,440 - INFO - Loaded RTV Report with 16 rows
-2025-09-06 15:18:22,734 - INFO - Processed 109 B2B rows
-2025-09-06 15:18:22,763 - INFO - Processed 16 CDNR rows
-2025-09-06 15:24:47,377 - INFO - Loaded GST file: C:\ganesh\ElitesecomTasks\I-O Files\gstr_1 test files\ajio\DropShipGstReports.xlsx with 109 rows
-2025-09-06 15:24:47,395 - INFO - Loaded RTV file: C:\ganesh\ElitesecomTasks\I-O Files\gstr_1 test files\ajio\DropShipRtvReports.xlsx with 16 rows
-2025-09-06 15:24:47,413 - INFO - Processed 109 B2B rows
-2025-09-06 15:24:47,417 - INFO - Processed 16 CDNR rows
-2025-09-06 15:24:47,569 - INFO - GSTR1 Excel created at C:\ganesh\ElitesecomTasks\I-O Files\gstr_1 test files\ajio\ajio_gstr1.xlsx
