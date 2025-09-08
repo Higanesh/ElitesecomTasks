@@ -1,5 +1,6 @@
 import pandas as pd
 from logger_manager import LoggerManager
+from validate_payload import validate_payload
 
 class AjioGSTR1Processor:
     def __init__(self, gst_file, rtv_file, output_file):
@@ -108,12 +109,24 @@ class AjioGSTR1Processor:
             self.logger.error(f"Error creating GSTR1 report: {e}")
             raise
 
+# ---------- MAIN SCRIPT ----------
 
 if __name__ == "__main__":
-    gst_file = r"D:\myProjects\ElitesecomTasks\I-O Files\gstr_1 test files\ajio\DropShipGstReports.xlsx"
-    rtv_file = r"D:\myProjects\ElitesecomTasks\I-O Files\gstr_1 test files\ajio\DropShipRtvReports.xlsx"
-    output_file = r"D:\myProjects\ElitesecomTasks\I-O Files\gstr_1 test files\ajio\ajio_gstr1.xlsx"
+    payload = {
+            "marketplace_name": "ajio",
+            "files": [
+                r"C:\ganesh\ElitesecomTasks\GSTR_1\gstr_1 test files\ajio\DropShipGstReports.xlsx",
+                r"C:\ganesh\ElitesecomTasks\GSTR_1\gstr_1 test files\ajio\DropShipRtvReports.xlsx",
+            ],
+            "user_email": "rachit@example.com",
+        }
 
-    processor = AjioGSTR1Processor(gst_file, rtv_file, output_file)
-    processor.load_files()
-    processor.create_gstr1()
+    # Validate payload first
+    is_valid, message = validate_payload(payload)
+    print(message)
+
+    if is_valid:
+            output_file = r"C:\ganesh\ElitesecomTasks\GSTR_1\gstr_1 test files\ajio\ajio_gstr1.xlsx"
+            processor = AjioGSTR1Processor(*payload["files"],output_file)
+            processor.load_files()
+            processor.create_gstr1()

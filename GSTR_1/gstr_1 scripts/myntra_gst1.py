@@ -1,8 +1,47 @@
+import os
 import pandas as pd
 from logger_manager import LoggerManager
 from workbook import ExcelWriter
+from validate_payload import validate_payload
 
+# # ✅ Required files for Myntra only
+# MYNTRA_REQUIRED_FILES = ["packed", "rt", "rto"]
 
+# # ---------- Payload Validation (Myntra Only) ----------
+# def validate_myntra_payload(payload):
+#     """
+#     Validate payload for Myntra marketplace.
+#     payload = {
+#         "marketplace_name": "myntra",
+#         "files": ["path/to/packed.csv", "path/to/rt.csv", "path/to/rto.csv"],
+#         "user_email": "user@example.com"
+#     }
+#     """
+#     marketplace = payload.get("marketplace_name", "").lower()
+#     files = payload.get("files", [])
+#     user_email = payload.get("user_email", "unknown")
+
+#     # 1. Check if the marketplace is Myntra
+#     if marketplace != "myntra":
+#         return False, f"❌ Invalid marketplace selected by {user_email}. Please select Myntra."
+
+#     # 2. Check file count
+#     if len(files) < len(MYNTRA_REQUIRED_FILES):
+#         return False, f"❌ Missing files for Myntra. Expected {len(MYNTRA_REQUIRED_FILES)}, got {len(files)}."
+
+#     # 3. Check that files exist
+#     for f in files:
+#         if not os.path.exists(f):
+#             return False, f"❌ File not found: {f}"
+
+#     # 4. Check that all required files are uploaded
+#     for req_file in MYNTRA_REQUIRED_FILES:
+#         if not any(req_file.lower() in os.path.basename(f).lower() for f in files):
+#             return False, f"❌ Required file '{req_file}' missing for Myntra"
+
+#     return True, f"✅ Payload validated successfully for Myntra (user: {user_email})"
+
+# ---------- Myntra GSTR-1 Processor ----------
 class MyntraGstr1Processor:
     def __init__(self, packed_file, rt_file=None, rto_file=None, log_file="myntra_gst.log"):
         self.packed_file = packed_file
@@ -13,7 +52,7 @@ class MyntraGstr1Processor:
         # Load packed file
         try:
             self.df_packed = pd.read_csv(packed_file)
-            self.logger.info(f"Loaded packed file: {packed_file} with {len(self.df_packed)} rows")
+            # self.logger.info(f"Loaded packed file: {packed_file} with {len(self.df_packed)} rows")
         except Exception as e:
             self.logger.error(f"Error reading packed file {packed_file}: {e}")
             raise
@@ -83,25 +122,21 @@ class MyntraGstr1Processor:
         result = []
         grand_total = 0
 
-        # ✅ Packed file
         packed = self.df_packed.copy()
         packed["state"] = packed["location"].str.strip().str.upper()
         packed["taxable_value"] = packed["base_value"]
         packed["tax_rate"] = packed["tax_rate"]
 
-        # ✅ RT file (negative taxable value)
         rt = self.df_rt.copy() if self.df_rt is not None else pd.DataFrame(columns=["delivery_state", "base_value", "tax_rate"])
         if not rt.empty:
             rt["state"] = rt["delivery_state"].str.strip().str.upper()
             rt["taxable_value"] = -rt["base_value"]
 
-        # ✅ RTO file (negative taxable value)
         rto = self.df_rto.copy() if self.df_rto is not None else pd.DataFrame(columns=["customer_state", "base_value", "tax_rate"])
         if not rto.empty:
             rto["state"] = rto["customer_state"].str.strip().str.upper()
             rto["taxable_value"] = -rto["base_value"]
 
-        # ✅ Merge all
         combined = pd.concat(
             [
                 packed[["state", "tax_rate", "taxable_value"]],
@@ -111,12 +146,11 @@ class MyntraGstr1Processor:
             ignore_index=True
         )
 
-        # ✅ Group by State + GST Rate
         grouped = combined.groupby(["state", "tax_rate"], as_index=False)["taxable_value"].sum()
 
         for _, row in grouped.iterrows():
             taxable_value = round(row["taxable_value"], 2)
-            if taxable_value == 0:  # 🚫 skip zero values
+            if taxable_value == 0:
                 continue
 
             state = row["state"]
@@ -134,10 +168,9 @@ class MyntraGstr1Processor:
                 "E-Commerce GSTIN": ""
             })
 
-            self.logger.info(f"Processed {state} at {tax_rate}% GST: Taxable={taxable_value}")
+            # self.logger.info(f"Processed {state} at {tax_rate}% GST: Taxable={taxable_value}")
 
-        # ✅ Grand Total
-        if grand_total != 0:  # only add if not zero
+        if grand_total != 0:
             result.append({
                 "Type": "TOTAL",
                 "Place Of Supply": "ALL STATES",
@@ -150,18 +183,27 @@ class MyntraGstr1Processor:
 
         return result
 
-
-# --------- MAIN SCRIPT ---------
+# ---------- MAIN SCRIPT ----------
 if __name__ == "__main__":
-    packed_file = r"D:\myProjects\ElitesecomTasks\GSTR_1\gstr_1 test files\myntra\packed.csv"
-    rt_file = r"D:\myProjects\ElitesecomTasks\GSTR_1\gstr_1 test files\myntra\rt.csv"
-    rto_file = r"D:\myProjects\ElitesecomTasks\GSTR_1\gstr_1 test files\myntra\rto.csv"
+    payload = {
+        "marketplace_name": "myntra",
+        "files": [
+            r"C:\ganesh\ElitesecomTasks\GSTR_1\gstr_1 test files\myntra\packed.csv",
+            r"C:\ganesh\ElitesecomTasks\GSTR_1\gstr_1 test files\myntra\rt.csv",
+            r"C:\ganesh\ElitesecomTasks\GSTR_1\gstr_1 test files\myntra\rto.csv"
+        ],
+        "user_email": "rachit@example.com",
+    }
 
-    processor = MyntraGstr1Processor(packed_file, rt_file, rto_file)
-    data = processor.process_data()
+    # Validate payload first
+    is_valid, message = validate_payload(payload)
+    print(message)
 
-    # Write to Excel with your common ExcelWriter
-    excel_file = r"D:\myProjects\ElitesecomTasks\GSTR_1\gstr_1 test files\myntra\myntra_gstr1.xlsx"
-    excel_writer = ExcelWriter(excel_file, "B2CS Summary")
-    excel_writer.write_data(data)
-    excel_writer.save()
+    if is_valid:
+        processor = MyntraGstr1Processor(*payload["files"])
+        data = processor.process_data()
+
+        excel_file = r"C:\ganesh\ElitesecomTasks\GSTR_1\gstr_1 test files\myntra\myntra_gstr1.xlsx"
+        excel_writer = ExcelWriter(excel_file, "B2CS Summary")
+        excel_writer.write_data(data)
+        excel_writer.save()

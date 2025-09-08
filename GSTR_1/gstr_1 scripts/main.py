@@ -1,22 +1,36 @@
-# main.py
-from celery_app import add, subtract, multiply, divide
+from celery_app import run_myntra_gstr1, run_limeroad_gstr1, run_ajio_gstr1
+
 
 if __name__ == "__main__":
-    print("Sending tasks...")
-    r1 = add.delay(4, 6)         # -> add_queue
-    r2 = subtract.delay(10, 4)    # -> subtract_queue
-    r3 = multiply.delay(6, 7)     # -> multiply_queue
-    r4 = divide.delay(20, 5)      # -> divide_queue
+    # --------- Myntra Task ---------
+    task1 = run_myntra_gstr1.apply_async(
+        args=[
+            r"C:\ganesh\ElitesecomTasks\GSTR_1\gstr_1 test files\myntra\packed.csv",
+            r"C:\ganesh\ElitesecomTasks\GSTR_1\gstr_1 test files\myntra\rt.csv",
+            r"C:\ganesh\ElitesecomTasks\GSTR_1\gstr_1 test files\myntra\rto.csv",
+            r"C:\ganesh\ElitesecomTasks\GSTR_1\gstr_1 test files\myntra\myntra_gstr1.xlsx",
+        ],
+        queue="myntra_queue"
+    )
+    print(f"📌 Myntra Task Sent! ID = {task1.id}")
 
-    print("Sent. IDs:")
-    print(" add:", r1.id)
-    print(" sub:", r2.id)
-    print(" mul:", r3.id)
-    print(" div:", r4.id)
+    # --------- Limeroad Task ---------
+    task2 = run_limeroad_gstr1.apply_async(
+        args=[
+            r"C:\ganesh\ElitesecomTasks\GSTR_1\gstr_1 test files\limeroad\limeroad_report.xlsx",
+            r"C:\ganesh\ElitesecomTasks\GSTR_1\gstr_1 test files\limeroad\limeroad_gstr1.xlsx",
+        ],
+        queue="limeroad_queue"
+    )
+    print(f"📌 Limeroad Task Sent! ID = {task2.id}")
 
-    # Safest way to fetch (gives real traceback if task fails)
-    print("Results:")
-    print(" add:", r1.get(timeout=30, propagate=True))
-    print(" sub:", r2.get(timeout=30, propagate=True))
-    print(" mul:", r3.get(timeout=30, propagate=True))
-    print(" div:", r4.get(timeout=30, propagate=True))
+    # --------- Ajio Task ---------
+    task3 = run_ajio_gstr1.apply_async(
+        args=[
+            r"C:\ganesh\ElitesecomTasks\GSTR_1\gstr_1 test files\ajio\DropShipGstReports.xlsx",
+            r"C:\ganesh\ElitesecomTasks\GSTR_1\gstr_1 test files\ajio\DropShipRtvReports.xlsx",
+            r"C:\ganesh\ElitesecomTasks\GSTR_1\gstr_1 test files\ajio\ajio_gstr1.xlsx",
+        ],
+        queue="ajio_queue"
+    )
+    print(f"📌 Ajio Task Sent! ID = {task3.id}")

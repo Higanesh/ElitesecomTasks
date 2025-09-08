@@ -1,6 +1,7 @@
 import pandas as pd
 from logger_manager import LoggerManager
 from workbook import ExcelWriter
+from validate_payload import validate_payload
 
 class LimeroadGSTProcessor:
     def __init__(self, input_excel, sheet_name="TCS_Summary", log_file="limeroad_gst.log"):
@@ -54,21 +55,27 @@ class LimeroadGSTProcessor:
 
         return records
 
-# ------------------ Manual Test ------------------
+# ---------- MAIN SCRIPT ----------
 if __name__ == "__main__":
-    input_file = r"D:\myProjects\ElitesecomTasks\GSTR_1\gstr_1 test files\limeroad\limeroad_report.xls"
-    output_file = r"D:\myProjects\ElitesecomTasks\GSTR_1\gstr_1 test files\limeroad\limeroad_gstr1.xlsx"
+    payload = {
+        "marketplace_name": "limeroad",
+        "files": [
+            r"C:\ganesh\ElitesecomTasks\GSTR_1\gstr_1 test files\limeroad\limeroad_report.xls",
+        ],
+        "user_email": "rachit@example.com",
+    }
 
-    processor = LimeroadGSTProcessor(input_file)
+    # Validate payload first
+    is_valid, message = validate_payload(payload)
+    print(message)
 
-    try:
+    if is_valid:
+        processor = LimeroadGSTProcessor(*payload["files"])
         data = processor.process()
 
         # Write to Excel
+        output_file = r"C:\ganesh\ElitesecomTasks\GSTR_1\gstr_1 test files\limeroad\limeroad_gstr1.xlsx"
         excel_writer = ExcelWriter(output_file, "B2CS Summary")
         excel_writer.write_data(data)
         excel_writer.save()
 
-    except Exception as e:
-        processor.logger.error(f"Error during processing: {e}")
-        raise

@@ -1,2 +1,4 @@
 2025-09-07 22:45:26,415 - ERROR - Error during processing: Missing optional dependency 'xlrd'. Install xlrd >= 2.0.1 for xls Excel support Use pip or conda to install xlrd.
 2025-09-07 22:47:35,752 - INFO - Loaded TCS_Summary with 22 rows
+2025-09-08 12:48:40,039 - INFO - Loaded TCS_Summary with 22 rows
+2025-09-08 12:49:57,078 - INFO - Loaded TCS_Summary with 22 rows
